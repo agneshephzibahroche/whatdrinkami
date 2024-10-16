@@ -1,97 +1,124 @@
-/* Base Styles */
+/* General styling */
+html,
 body {
-  font-family: "Arial", sans-serif;
+  height: 100%;
   margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-}
-
-header {
-  background-color: #ffe0b2;
-  padding: 20px;
+  font-family: "Arial", sans-serif;
+  background-color: #f3e5ab; /* Cream background for softness */
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-h1 {
-  margin: 0;
-  font-size: 2em;
+header {
+  display: flex;
+  justify-content: center; /* Centers nav */
+  align-items: center;
+  padding: 20px;
+  background-color: #4e342e; /* Coffee brown for header */
 }
 
 nav ul {
-  list-style: none;
+  list-style-type: none;
+  margin: 0;
   padding: 0;
-  margin: 20px 0;
+  display: flex; /* Horizontally aligns nav items */
+  justify-content: center;
+  flex-wrap: nowrap; /* Prevents wrapping */
+  overflow-x: auto; /* Allows horizontal scrolling if needed */
 }
 
 nav ul li {
-  display: inline;
-  margin: 0 15px;
+  display: inline-block;
+  margin: 0 40px; /* Significant spacing between nav items */
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #4a4a4a;
+  font-size: 1.2rem;
+  color: #ffcc80; /* Soft orange text */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f57c00; /* Darker orange for hover effect */
+}
+
+.logo {
+  font-family: "ToastyFont", sans-serif; /* Assuming a custom font */
+  font-size: 3rem;
+  color: #4e342e; /* Soft orange logo */
+  margin: 0;
 }
 
 main {
-  padding: 20px;
-  text-align: center;
-}
-
-section {
-  margin-bottom: 40px;
+  margin: 20px 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-image {
-  max-width: 100%;
-  height: auto;
-  margin: 20px 0;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
 }
 
-.cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ffcc80;
-  color: #4a4a4a;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-  transition: background-color 0.3s;
+h2 {
+  font-size: 1.5rem;
+  color: #715e51; /* Coffee brown for headings */
 }
 
-.cta-button:hover {
-  background-color: #ffb74d;
-}
-
+/* Footer Styling */
 footer {
+  background-color: #6d4c41; /* Darker brown for footer */
+  color: #ffcc80; /* Soft orange text */
+  padding: 10px 0;
   text-align: center;
-  background-color: #ffe0b2;
-  padding: 10px;
+  font-size: 0.8rem;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 1.5em;
-  }
-
   nav ul li {
-    display: block;
-    margin: 10px 0;
+    margin: 0 15px; /* Slightly decrease margin between nav items */
   }
 
-  .cta-button {
-    font-size: 1em;
+  .logo {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-image {
+    max-width: 200px;
   }
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.2em;
+  nav ul {
+    justify-content: space-around; /* Ensures links are spaced but not stacked */
+    flex-wrap: nowrap; /* Keeps the navbar in a single row */
   }
 
-  .cta-button {
-    font-size: 0.9em;
-    padding: 8px 15px;
+  nav ul li {
+    margin: 0 10px; /* Smaller margins between nav items on small screens */
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    max-width: 150px;
   }
 }
