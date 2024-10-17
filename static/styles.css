@@ -4,7 +4,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: #f3e5ab;
+  background-color: #fff7e8;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -15,7 +15,7 @@ header {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: #4e342e;
+  background-color: #ece36e;
 }
 
 nav ul {
@@ -36,19 +36,18 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: #ffcc80;
+  color: #cc3363;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #f57c00;
+  color: #ea81ab;
 }
 
 .logo {
-  font-family: "ToastyFont", sans-serif;
   font-size: 3rem;
-  color: #4e342e;
+  color: #e1532a;
   margin: 0;
 }
 
@@ -74,22 +73,23 @@ main {
 
 h2 {
   font-size: 1.5rem;
-  color: #715e51;
+  color: #d45279;
 }
 
 .start{
   font-size: 1rem;
   font-weight: bold;
-  color: #4e342e;
+  color: #4ab293;
 }
 
 /* Footer Styling */
 footer {
-  background-color: #6d4c41;
-  color: #ffcc80;
+  background-color: #ece36e;
+  color: #cc3363;
   padding: 10px 0;
   text-align: center;
   font-size: 0.8rem;
+  font-weight: bold;
 }
 
 /* Responsive Styles */

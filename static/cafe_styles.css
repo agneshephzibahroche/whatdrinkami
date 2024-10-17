@@ -1,0 +1,108 @@
+/* General body and background */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ece36e; /* Light background color to match styles.css */
+    color: #e1532a;
+    text-align: center;
+}
+
+/* Progress Bar Styling */
+#progress-container {
+    width: 100%;
+    background-color: #f7aecb; /* Light pink for progress background */
+    height: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#progress-bar {
+    width: 0;
+    height: 100%;
+    background-color: #cc3363; /* Bright pink for progress bar */
+    transition: width 0.5s ease;
+}
+
+/* Quiz Section Styling */
+#quiz-section {
+    margin: 10% auto;
+    padding: 20px;
+    background-color: #fff7e8; /* Vibrant red-orange for quiz section */
+    border-radius: 10px;
+    width: 80%;
+    height: 95%;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#quiz-section h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #4ab293; /* White for text contrast */
+}
+
+/* Quiz Options Styling */
+#quiz {
+    display: flex;
+    flex-direction: column;
+}
+
+.option button {
+    background: linear-gradient(135deg, #f57c00, #e68a00); /* Gradient background */
+    color: #fff; /* White text for contrast */
+    padding: 15px 20px;
+    border: none;
+    margin: 10px 0;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.option button:hover {
+    background: linear-gradient(135deg, #e68a00, #f57c00); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Result Section Styling */
+#result {
+    margin: 20px auto;
+    font-size: 1.5rem;
+    color: #fff; /* Keep text white for contrast */
+    width: 80%;
+}
+
+/* Loading Animation */
+#load {
+    display: none;
+    margin: 20px auto;
+}
+
+#load img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Restart Button Styling */
+button.restart {
+    background-color: #ffcc80; /* Light orange for restart button */
+    color: #4e342e; /* Dark text for contrast */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.question-image {
+    max-width: 50%; /* Set to a smaller size, adjust as needed */
+    height: 50%; /* Maintain aspect ratio */
+    margin: 20px auto; /* Center the image */
+    transition: transform 0.3s; /* Optional: add a transition for scale effect on hover */
+}
+
+.question-image:hover {
+    transform: scale(1.05); /* Optional: scale up slightly on hover */
+}
