@@ -1,7 +1,7 @@
 function startQuiz() {
   // Narrative prompts for the quiz
   const narration = [
-    "As you step into the cozy café, the rich aroma of freshly brewed coffee welcomes you.",
+    "As you step into a cozy café on a Monday evening, a rich mix of fragrances welcomes you.",
     "You glance around and notice the inviting menu filled with unique drink options.",
     "Feeling a little adventurous, you decide to explore the drink choices available.",
     "You spot a group of friends laughing over their drinks and feel a spark of excitement.",
@@ -17,7 +17,7 @@ function startQuiz() {
 
   // Questions and options for each question
   const questions = [
-    ["How do you feel when you first enter a café?", ["Excited to meet new people ☕", "Content to find a quiet spot 🍵"]],
+    ["How do you feel when you first enter a café?", ["Excited to meet new people after a long day at work ☕", "Content to find a quiet spot to🍵"]],
     ["What kind of environment do you prefer?", ["Lively and bustling 🥤", "Calm and serene 🏡"]],
     ["When choosing a drink, do you:", ["Like to try new and trendy drinks 🍹", "Stick to your classic favorites ☕"]],
     ["How do you approach making decisions?", ["Analyze all the options carefully 🤔", "Follow your instincts 💡"]],
