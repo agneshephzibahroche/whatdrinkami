@@ -26,7 +26,7 @@ body {
 
 /* Quiz Section Styling */
 #quiz-section {
-    margin: 10% auto;
+    margin: 7% auto;
     padding: 20px;
     background-color: #fff7e8; /* Vibrant red-orange for quiz section */
     border-radius: 10px;
@@ -48,22 +48,25 @@ body {
     flex-direction: column;
 }
 
-.option button {
-    background: linear-gradient(135deg, #f57c00, #e68a00); /* Gradient background */
+.option {
+    background: #cc3363; /* Gradient background */
     color: #fff; /* White text for contrast */
+    width: 80%;
     padding: 15px 20px;
     border: none;
-    margin: 10px 0;
+    margin: 5px 0;
     border-radius: 8px; /* Rounded corners */
-    font-size: 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    transition: background 0.7s ease, transform 0.2s ease; /* Smooth transitions */
+    align-self: center;
 }
 
-.option button:hover {
-    background: linear-gradient(135deg, #e68a00, #f57c00); /* Darker gradient on hover */
+.option:hover {
+    background: #f7aecb; /* Darker gradient on hover */
     transform: translateY(-2px); /* Lift effect on hover */
+    color: #000;
 }
 
 /* Result Section Styling */
