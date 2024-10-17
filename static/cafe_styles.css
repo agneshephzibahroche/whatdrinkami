@@ -1,111 +1,171 @@
 /* General body and background */
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #ece36e; /* Light background color to match styles.css */
-    color: #e1532a;
-    text-align: center;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #ece36e; /* Light background color to match styles.css */
+  color: #e1532a;
+  text-align: center;
 }
 
 /* Progress Bar Styling */
 #progress-container {
-    width: 100%;
-    background-color: #f7aecb; /* Light pink for progress background */
-    height: 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
+  width: 100%;
+  background-color: #f7aecb; /* Light pink for progress background */
+  height: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 1%;
 }
 
 #progress-bar {
-    width: 0;
-    height: 100%;
-    background-color: #cc3363; /* Bright pink for progress bar */
-    transition: width 0.5s ease;
+  width: 0;
+  height: 100%;
+  background-color: #cc3363; /* Bright pink for progress bar */
+  transition: width 0.5s ease;
 }
 
 /* Quiz Section Styling */
 #quiz-section {
-    margin: 2% auto;
-    padding: 20px;
-    background-color: #fff7e8; /* Vibrant red-orange for quiz section */
-    border-radius: 10px;
-    width: 80%;
-    height: 95%;
-    max-width: 600px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin: 10% auto;
+  padding: 1%;
+  background-color: #fff7e8; /* Vibrant red-orange for quiz section */
+  border-radius: 10px;
+  width: 80%;
+  height: 95%;
+  max-width: 600px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-#quiz-section h1 {
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    color: #4ab293; /* White for text contrast */
+/* Font Styling for Heading */
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  color: #4ab293; /* Contrasting color for the heading */
+  margin-bottom: 20px;
 }
 
 /* Quiz Options Styling */
 #quiz {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 1.5rem;
+}
+
+.fjalla-one-regular {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .option {
-    background: #cc3363; /* Gradient background */
-    color: #fff; /* White text for contrast */
-    width: 80%;
-    padding: 15px 20px;
-    border: none;
-    margin: 5px 0;
-    border-radius: 8px; /* Rounded corners */
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-    transition: background 0.7s ease, transform 0.2s ease; /* Smooth transitions */
-    align-self: center;
+  background: #cc3363; /* Gradient background */
+  color: #fff; /* White text for contrast */
+  width: 80%;
+  padding: 5px 10px;
+  border: none;
+  margin: 5px 0;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  transition: background 0.7s ease, transform 0.2s ease;
+  align-self: center;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 1.2rem;
 }
 
 .option:hover {
-    background: #f7aecb; /* Darker gradient on hover */
-    transform: translateY(-2px); /* Lift effect on hover */
-    color: #000;
+  background: #f7aecb; /* Darker gradient on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+  color: #000;
 }
 
 /* Result Section Styling */
 #result {
-    margin: 20px auto;
-    font-size: 1.5rem;
-    color: #fff; /* Keep text white for contrast */
-    width: 80%;
+  margin: 20px auto;
+  font-size: 1.5rem;
+  color: #fff; /* Keep text white for contrast */
+  width: 80%;
 }
 
 /* Loading Animation */
 #load {
-    display: none;
-    margin: 20px auto;
+  display: none;
+  margin: 20px auto;
 }
 
 #load img {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 /* Restart Button Styling */
 button.restart {
-    background-color: #ffcc80; /* Light orange for restart button */
-    color: #4e342e; /* Dark text for contrast */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+  background-color: #ffcc80; /* Light orange for restart button */
+  color: #4e342e; /* Dark text for contrast */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .question-image {
-    max-width: 50%; /* Set to a smaller size, adjust as needed */
-    height: 50%; /* Maintain aspect ratio */
-    margin: 20px auto; /* Center the image */
-    transition: transform 0.3s; /* Optional: add a transition for scale effect on hover */
+  max-width: 50%; /* Set to a smaller size, adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px auto; /* Center the image */
+  transition: transform 0.3s;
 }
 
 .question-image:hover {
-    transform: scale(1.05); /* Optional: scale up slightly on hover */
+  transform: scale(1.05); /* Optional: scale up slightly on hover */
+}
+
+/* Responsive Design for Tablets and Smaller Screens */
+@media (max-width: 768px) {
+  #quiz-section {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .bebas-neue-regular {
+    font-size: 2.5rem;
+  }
+
+  .option {
+    width: 90%;
+    padding: 12px 15px;
+    font-size: 1.2rem;
+  }
+
+  .question-image {
+    max-width: 70%;
+  }
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 480px) {
+  #quiz-section {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .bebas-neue-regular {
+    font-size: 2rem;
+  }
+
+  .option {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1.2rem;
+  }
+
+  .question-image {
+    max-width: 80%;
+  }
+
+  #result {
+    font-size: 1.2rem;
+  }
 }
