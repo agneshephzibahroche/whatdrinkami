@@ -4,7 +4,7 @@ function startQuiz() {
     "As you step into a cozy café on a Monday evening, a rich mix of fragrances welcomes you, promising comfort after a long day.",
     "You glance around and notice the menu filled with so many unique drink options, each one more enticing than the last.",
     "Feeling a little adventurous, you decide to explore the drink choices available, wondering what flavors will excite your taste buds.",
-    "You spot a group of friends laughing over their drinks, their joy infectious, and you feel a spark of excitement about connecting with others.",
+    "You spot a person in the cafe reading the same book as you, and you feel a spark of excitement about connecting with others.",
     "Approaching the counter, you take a moment to decide what to order, weighing your options as you consider your mood.",
     "The barista greets you with a warm smile, ready to take your order, making you feel at home in this vibrant atmosphere.",
     "You consider how you’d like your drink prepared – something hot to warm you up or a cool refreshment for a laid-back vibe?",
@@ -29,9 +29,9 @@ const questions = [
         ["Like to try new and trendy drinks, always on the lookout for the next big thing 🍹", 
          "Stick to your classic favorites; you know what you like ☕"]
     ],
-    ["How do you approach making decisions?", 
-        ["Analyze all the options carefully, weighing the pros and cons 🤔", 
-         "Follow your instincts; you trust your gut 💡"]
+    ["How do you approach them?", 
+        ["Analyze all the options carefully, weighing the pros and cons of meeting them🤔", 
+         "Follow your instincts; you trust your gut and put on your biggest smile to greet them 💡"]
     ],
     ["What is your ideal café visit?", 
         ["Chatting with friends over coffee, sharing stories ☕", 
@@ -71,15 +71,15 @@ const questions = [
   // Images corresponding to each question
   const images = [
     "static/images/cafe.png", // Image for question 1
-    "static/images/cafe.png", // Image for question 2
-    "static/images/cafe.png", // Image for question 3
-    "static/images/cafe.png", // Image for question 4
-    "static/images/cafe.png", // Image for question 5
-    "static/images/cafe.png", // Image for question 6
-    "static/images/cafe.png", // Image for question 7
-    "static/images/cafe.png", // Image for question 8
-    "static/images/cafe.png", // Image for question 9
-    "static/images/cafe.png", // Image for question 10
+    "static/images/menu.png", // Image for question 2
+    "static/images/drink.png", // Image for question 3
+    "static/images/buddy.png", // Image for question 4
+    "static/images/thinking.png", // Image for question 5
+    "static/images/barista.png", // Image for question 6
+    "static/images/temperatures.png", // Image for question 7
+    "static/images/flavour.png", // Image for question 8
+    "static/images/latte-art.png", // Image for question 9
+    "static/images/aroma.png", // Image for question 10
     "static/images/cafe.png", // Image for question 11
     "static/images/cafe.png"  // Image for question 12
   ];
