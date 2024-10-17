@@ -58,7 +58,7 @@ const questions = [
          "I prefer to stick to what I know; familiarity is comforting 🍵"]
     ],
     ["At the café, do you usually:", 
-        ["Chat with the barista to learn about new drinks ☕", 
+        ["Chat with the barista ☕", 
          "Keep to yourself and enjoy the ambiance 📚"]
     ],
     ["As you leave the café, you think about:", 
