@@ -180,22 +180,22 @@ function startQuiz() {
   // Function to get drink recommendation based on MBTI type
   function getDrinkRecommendation(mbti) {
     const recommendations = {
-      ESTJ: 'Coffee ☕',
-      ISTJ: 'Herbal Tea 🍵',
+      INTJ: 'Espresso Shot ☕',
+      ENTJ: 'Double Espresso ☕',
+      INTP: 'Iced Americano ☕',
+      ENTP: 'Nitro Cold Brew 🍻',
+      INFJ: 'Matcha Latte 🍵',
+      INFP: 'Chai Tea Latte 🍂',
+      ENFJ: 'Caramel Macchiato 🍮',
       ENFP: 'Strawberry Smoothie 🍓',
-      INFP: 'Chai ☕',
+      ISTJ: 'Herbal Tea 🍵',
+      ESTJ: 'Black Coffee ☕',
+      ISFJ: 'Oat Milk Latte 🥛',
       ESFJ: 'Hot Chocolate 🍫',
-      ISFJ: 'Oat Milk 🥛',
-      ESTP: 'Soda 🥤',
-      ISFP: 'Lemonade 🍋',
-      ENTJ: 'Espresso Shot ☕',
-      INTJ: 'Coconut Water 🥥',
-      ENFJ: 'Orange Juice 🍊',
-      INFJ: 'Bubble Tea 🧋',
-      ESTP: 'Iced Tea 🍹',
-      ISTP: 'Celery Juice 🥬',
-      ESFP: 'Milkshake 🍦',
-      ISFP: 'Water 💧',
+      ISTP: 'Cold Brew Coffee ☕',
+      ISFP: 'Fruit Smoothie 🥭',
+      ESTP: 'Iced Mocha ☕🍫',
+      ESFP: 'Milkshake 🍦'
     };
     return recommendations[mbti] || 'A refreshing drink! 🍹';
   }
