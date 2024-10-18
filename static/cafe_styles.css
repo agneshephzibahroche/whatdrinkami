@@ -180,3 +180,33 @@ button.restart {
 .question-image:hover {
   transform: scale(1.05);
 }
+
+/* Smaller image container */
+.result-image {
+  max-width: 150px; /* Smaller image size */
+  margin: 10px auto;
+  display: block;
+}
+
+/* Download button styling */
+.download-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px; /* Smaller padding for a more compact button */
+  background-color: #4ab293;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem; /* Smaller font size */
+  border-radius: 6px; /* More compact border radius */
+  transition: background 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #3a9b73;
+}
+
+/* Result section container */
+#quiz {
+  max-width: 400px; /* Smaller container for the result section */
+  margin: 0 auto;
+}

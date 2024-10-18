@@ -149,23 +149,74 @@ function startQuiz() {
     displayQuestion();
   }
 
-  // Function to display the results
-  function showResults() {
-    const quizContainer = document.getElementById('quiz');
-    quizContainer.innerHTML = ''; // Clear the quiz container
+// Function to display the results
+function showResults() {
+  const quizContainer = document.getElementById('quiz');
+  quizContainer.innerHTML = ''; // Clear the quiz container
 
-    // Calculate the MBTI result based on scores
-    const mbti = calculateMBTI();
-    
-    // Display the final result
-    quizContainer.appendChild(createElement('div', `Your MBTI type is: ${mbti}`));
-    quizContainer.appendChild(createElement('div', `You are best matched with: ${getDrinkRecommendation(mbti)}`));
+  // Calculate the MBTI result based on scores
+  const mbti = calculateMBTI();
+  
+  // Display the final result
+  const resultDiv = createElement('div', `Your MBTI type is: ${mbti}`);
+  quizContainer.appendChild(resultDiv);
 
-    const restartButton = createElement('button', 'Take the Quiz Again');
-    restartButton.classList.add('restart');
-    restartButton.addEventListener('click', restartQuiz);
-    quizContainer.appendChild(restartButton);
-  }
+  const drinkRecommendation = createElement('div', `You are best matched with: ${getDrinkRecommendation(mbti)}`);
+  quizContainer.appendChild(drinkRecommendation);
+
+  // Set image URL based on MBTI type (ensure these paths match your file locations)
+  const imageUrls = {
+      ESTJ: 'static/images/intj-image.png',
+      ISTJ: 'static/images/intj-image.png',
+      ENTJ: 'static/images/intj-image.png',
+      INTJ: 'static/images/intj-image.png',
+      ENTP: 'static/images/intj-image.png',
+      INTP: 'static/images/intj-image.png',
+      ENFJ: 'static/images/intj-image.png',
+      INFJ: 'static/images/intj-image.png',
+      ENFP: 'static/images/intj-image.png',
+      INFP: 'static/images/intj-image.png',
+      ESFP: 'static/images/intj-image.png',
+      ISFP: 'static/images/intj-image.png',
+      ESTP: 'static/images/intj-image.png',
+      ISTP: 'static/images/intj-image.png',
+      ESFJ: 'static/images/intj-image.png',
+      ISFJ: 'static/images/intj-image.png',
+  };
+
+  // Create an image element for the MBTI type
+  const resultImage = createElement('img');
+  resultImage.src = imageUrls[mbti];
+  resultImage.alt = `${mbti} Drink Recommendation`;
+  resultImage.classList.add('result-image');
+  quizContainer.appendChild(resultImage);
+
+  // Create a container for buttons
+  const buttonsContainer = createElement('div');
+  buttonsContainer.classList.add('buttons-container');
+  quizContainer.appendChild(buttonsContainer);
+
+  // Create a download button
+  const downloadButton = createElement('a', 'Download');
+  downloadButton.href = imageUrls[mbti];
+  downloadButton.download = `${mbti}-drink.png`;
+  buttonsContainer.appendChild(downloadButton);
+
+  // Create a restart button
+  const restartButton = createElement('button', 'Take the Quiz Again');
+  restartButton.classList.add('option');
+  restartButton.addEventListener('click', restartQuiz);
+  buttonsContainer.appendChild(restartButton);
+}
+
+// Helper function to create an HTML element
+function createElement(tag, textContent, classList = []) {
+  const element = document.createElement(tag);
+  element.textContent = textContent;
+  if (classList.length) element.classList.add(...classList);
+  return element;
+}
+
 
   // Helper function to calculate the MBTI type
   function calculateMBTI() {
