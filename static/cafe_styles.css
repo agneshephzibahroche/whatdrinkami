@@ -2,46 +2,109 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #ece36e; /* Light background color to match styles.css */
-  color: #e1532a;
+  background-color: #0c2c47;
+  color: #2e5749;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  flex-direction: column;
 }
 
-/* Progress Bar Styling */
+.spicy-rice-regular {
+  font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mouse-memoirs-regular {
+  font-family: "Mouse Memoirs", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Progress Bar Container */
 #progress-container {
-  width: 100%;
-  background-color: #f7aecb; /* Light pink for progress background */
-  height: 10px;
+  width: 80%;
+  height: 0.8rem;
+  background-color: #ddd; /* Neutral background */
   position: fixed;
   top: 0;
-  left: 0;
-  margin-top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.5rem;
+  z-index: 100;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+  overflow: hidden;
+  margin-top: 10px;
 }
 
+/* Progress Bar Fill */
 #progress-bar {
   width: 0;
   height: 100%;
-  background-color: #cc3363; /* Bright pink for progress bar */
+  background: linear-gradient(90deg, #e1532a, #e24aa8); /* Gradient effect */
+  border-radius: 0.5rem 0 0 0.5rem;
   transition: width 0.5s ease;
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.6); /* Soft glow effect */
 }
+
+/* Optional Progress Percentage */
+#progress-percentage {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: #2e5749;
+  position: absolute;
+  top: -1.5rem; /* Float percentage above the bar */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Progress Icon - Optional */
+#progress-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  transition: left 0.5s ease;
+}
+
+#progress-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
 
 /* Quiz Section Styling */
 #quiz-section {
-  margin: 10% auto;
   padding: 1%;
-  background-color: #fff7e8; /* Vibrant red-orange for quiz section */
+  background-color: #dbc9c5;
   border-radius: 10px;
   width: 80%;
-  height: 95%;
   max-width: 600px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 /* Font Styling for Heading */
 .bebas-neue-regular {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 3rem;
-  color: #4ab293; /* Contrasting color for the heading */
+  font-family: "Spicy Rice", serif;
+  font-size: 2.2rem;
+  color: #e1532a;
   margin-bottom: 20px;
 }
 
@@ -49,35 +112,29 @@ body {
 #quiz {
   display: flex;
   flex-direction: column;
-  font-family: "Fjalla One", sans-serif;
-  font-size: 1.5rem;
-}
-
-.fjalla-one-regular {
-  font-family: "Fjalla One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Spicy Rice", serif;
+  font-size: 1.2rem;
 }
 
 .option {
-  background: #cc3363; /* Gradient background */
-  color: #fff; /* White text for contrast */
+  background: #0c2c47;
+  color: #fff;
   width: 80%;
   padding: 5px 10px;
   border: none;
   margin: 5px 0;
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background 0.7s ease, transform 0.2s ease;
   align-self: center;
-  font-family: "Fjalla One", sans-serif;
+  font-family: "Mouse Memoirs", sans-serif;
   font-size: 1.2rem;
 }
 
 .option:hover {
-  background: #f7aecb; /* Darker gradient on hover */
-  transform: translateY(-2px); /* Lift effect on hover */
+  background: #abcbca;
+  transform: translateY(-2px);
   color: #000;
 }
 
@@ -85,7 +142,7 @@ body {
 #result {
   margin: 20px auto;
   font-size: 1.5rem;
-  color: #fff; /* Keep text white for contrast */
+  color: #fff;
   width: 80%;
 }
 
@@ -102,8 +159,10 @@ body {
 
 /* Restart Button Styling */
 button.restart {
-  background-color: #ffcc80; /* Light orange for restart button */
-  color: #4e342e; /* Dark text for contrast */
+  background-color: #0c2c47;
+  font-family: "Mouse Memoirs", sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -112,60 +171,12 @@ button.restart {
 }
 
 .question-image {
-  max-width: 50%; /* Set to a smaller size, adjust as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin: 20px auto; /* Center the image */
+  max-width: 50%;
+  height: auto;
+  margin: 20px auto;
   transition: transform 0.3s;
 }
 
 .question-image:hover {
-  transform: scale(1.05); /* Optional: scale up slightly on hover */
-}
-
-/* Responsive Design for Tablets and Smaller Screens */
-@media (max-width: 768px) {
-  #quiz-section {
-    width: 90%;
-    padding: 15px;
-  }
-
-  .bebas-neue-regular {
-    font-size: 2.5rem;
-  }
-
-  .option {
-    width: 90%;
-    padding: 12px 15px;
-    font-size: 1.2rem;
-  }
-
-  .question-image {
-    max-width: 70%;
-  }
-}
-
-/* Responsive Design for Mobile Phones */
-@media (max-width: 480px) {
-  #quiz-section {
-    width: 95%;
-    padding: 10px;
-  }
-
-  .bebas-neue-regular {
-    font-size: 2rem;
-  }
-
-  .option {
-    width: 100%;
-    padding: 10px 12px;
-    font-size: 1.2rem;
-  }
-
-  .question-image {
-    max-width: 80%;
-  }
-
-  #result {
-    font-size: 1.2rem;
-  }
+  transform: scale(1.05);
 }

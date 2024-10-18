@@ -4,18 +4,31 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: #fff7e8;
+  background-color: #dbc9c5;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
+.spicy-rice-regular {
+  font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mouse-memoirs-regular {
+  font-family: "Mouse Memoirs", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Header styling */
 header {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: #ece36e;
+  background-color: #0c2c47;
 }
 
 nav ul {
@@ -23,32 +36,36 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly; /* Distribute space more evenly */
   flex-wrap: nowrap;
-  overflow-x: auto;
+  width: 100%; /* Full width of the container */
 }
 
 nav ul li {
   display: inline-block;
-  margin: 0 40px;
+  padding: 0 40px; /* Increase padding for better spacing */
 }
 
 nav ul li a {
+  font-family: "Mouse Memoirs", sans-serif;
   text-decoration: none;
-  font-size: 1.2rem;
-  color: #cc3363;
+  font-size: 2rem;
+  color: #abcbca;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ea81ab;
+  color: #fff;
 }
 
+/* Responsive h1 Logo Styling */
 .logo {
-  font-size: 3rem;
+  font-family: "Spicy Rice", serif;
   color: #e1532a;
   margin: 0;
+  font-size: 6rem; /* Large default size */
+  line-height: 1.2; /* Slightly reduce line spacing */
 }
 
 main {
@@ -64,7 +81,7 @@ main {
   max-width: 300px;
   margin: 20px auto;
   display: block;
-  transition: transform .5s;
+  transition: transform 0.5s;
 }
 
 .hero-image:hover {
@@ -72,38 +89,47 @@ main {
 }
 
 h2 {
-  font-size: 1.5rem;
-  color: #d45279;
+  font-family: "Mouse Memoirs", sans-serif;
+  font-size: 2.5rem;
+  color: #2e5749;
 }
 
-.start{
-  font-size: 1rem;
+.start {
+  font-family: "Mouse Memoirs", sans-serif;
+  font-size: 2rem;
   font-weight: bold;
-  color: #4ab293;
+  color: #da9b2b;
 }
 
 /* Footer Styling */
 footer {
-  background-color: #ece36e;
-  color: #cc3363;
+  font-family: "Mouse Memoirs", sans-serif;
+  background-color: #0c2c47;
+  color: #bf512c;
   padding: 10px 0;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
 /* Responsive Styles */
+@media (max-width: 1200px) {
+  .logo {
+    font-size: 5rem; /* Slightly smaller for large tablets or small desktops */
+  }
+}
+
 @media (max-width: 768px) {
   nav ul li {
     margin: 0 15px;
   }
 
   .logo {
-    font-size: 2rem;
+    font-size: 4rem; /* Smaller on tablets */
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Adjusting subtitle size */
   }
 
   .hero-image {
@@ -122,11 +148,11 @@ footer {
   }
 
   .logo {
-    font-size: 1.5rem;
+    font-size: 3rem; /* Further reduce on mobile screens */
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .hero-image {

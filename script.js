@@ -1,77 +1,76 @@
 function startQuiz() {
   // Narrative prompts for the quiz
   const narration = [
-    "As you step into a cozy café on a Monday evening, a rich mix of fragrances welcomes you, promising comfort after a long day.",
-    "You glance around and notice the menu filled with so many unique drink options, each one more enticing than the last.",
-    "Feeling a little adventurous, you decide to explore the drink choices available, wondering what flavors will excite your taste buds.",
-    "You spot a person in the cafe reading the same book as you, and you feel a spark of excitement about connecting with others.",
-    "Approaching the counter, you take a moment to decide what to order, weighing your options as you consider your mood.",
-    "The barista greets you with a warm smile, ready to take your order, making you feel at home in this vibrant atmosphere.",
-    "You consider how you’d like your drink prepared – something hot to warm you up or a cool refreshment for a laid-back vibe?",
-    "As you wait for your drink, you take in the ambiance of the café, observing the people around you and soaking in the lively conversations.",
-    "You see a couple sharing stories over steaming cups of coffee and a group animatedly discussing the latest book they read.",
-    "Your drink is ready, and you can't wait to try it! The aroma teases your senses as you pick it up.",
-    "As you prepare to leave, you take a moment to appreciate the café's vibe, feeling a sense of fulfillment from the experience.",
-    "With your drink in hand, you step out, ready for your next adventure, excited to reflect on the choices you made today."
-];
+    "As you step into a cozy café, the inviting aroma of freshly brewed coffee wraps around you, promising comfort.",
+    "You glance around and notice the atmosphere of the cafe.",
+    "Feeling a bit adventurous, you decide to explore the drink choices available, wondering which flavors will excite you.",
+    "In the café, you notice someone engrossed in the same book as you. The prospect of connecting sparks your curiosity.",
+    "Approaching the counter, you take a moment, considering your mood and what drink would make you feel just right.",
+    "The barista greets you with a warm smile, creating a welcoming atmosphere that makes you feel at home in this vibrant space.",
+    "You ponder how you'd like your drink prepared – something hot to energize you or a cool refreshment for a laid-back vibe?",
+    "While waiting for your drink, you soak in the ambiance, observing the lively conversations and the mix of people around.",
+    "Your order is called up at the counter and you eye the drink the barista hands to you.",
+    "Your drink is ready, and the delightful aroma captivates you as you pick it up, eager to take your first sip.",
+    "As you prepare to leave, you take a moment to appreciate the café's cozy vibe, feeling a sense of fulfillment.",
+    "With your drink in hand, you step out, excited about the flavors you've chosen and the connections you might have made."
+  ];
 
-// Questions and options for each question
-const questions = [
+  // Questions and options for each question
+  const questions = [
     ["How do you feel when you first enter a café?", 
-        ["Excited to meet your friends and catch up ☕", 
-         "Content to find a quiet spot and relax 🍵"]
+        ["Eager to catch up with friends and share stories ☕", 
+         "Content to find a cozy corner to relax and people watch 🍵"]
     ],
-    ["What kind of environment do you prefer?", 
-        ["Lively and bustling, full of energy 🥤", 
-         "Calm and serene, where I can think 🏡"]
+    ["What kind of environment do you thrive in?", 
+        ["A vibrant café buzzing with chatter and laughter 🥤", 
+         "A peaceful library or a quiet café corner 🏡"]
     ],
-    ["When choosing a drink, do you:", 
-        ["Like to try new and trendy drinks, always on the lookout for the next big thing 🍹", 
-         "Stick to your classic favorites; you know what you like ☕"]
+    ["When browsing the drink menu, do you:", 
+        ["Experiment with unique and trendy drinks 🍹", 
+         "Stick with your reliable favorites ☕"]
     ],
-    ["How do you approach them?", 
-        ["Analyze all the options carefully, weighing the pros and cons of meeting them🤔", 
-         "Follow your instincts; you trust your gut and put on your biggest smile to greet them 💡"]
+    ["How would you approach new people at the café?", 
+        ["I confidently start conversations and make connections 🤝", 
+         "I prefer to observe and engage only if I feel comfortable 👀"]
     ],
-    ["What is your ideal café visit?", 
-        ["Chatting with friends over coffee, sharing stories ☕", 
-         "Reading a book alone with tea, enjoying the solitude 🍵"]
+    ["What’s your ideal café experience?", 
+        ["Engaging in lively discussions with friends ☕", 
+         "Reading quietly and enjoying my drink alone 🍵"]
     ],
-    ["While waiting for your drink, you see someone who ordered the same drink as you:", 
-        ["Engage with the customer and strike up conversation about the drink 🗣️", 
-         "Enjoy your own company, and smile thinking your drink choice was good 📖"]
+    ["The barista makes small talk with you, what do you do?", 
+        ["Entertain the conversation and chat, maybe make a new friend 🗣️", 
+         "Respond politely and focus on ordering my drink 📖"]
     ],
     ["Do you prefer your drinks:", 
-        ["Hot and energizing, like a strong coffee ☕", 
-         "Cool and refreshing, perfect for a sunny day 🍹"]
+        ["Strong and bold to keep you energized ☕", 
+         "Light and refreshing to relax you 🍹"]
     ],
-    ["When it comes to flavors, do you enjoy:", 
-        ["Bold and intense flavors that make a statement 🍫", 
-         "Light and fruity flavors that refresh 🍊"]
+    ["When it comes to trying new flavors, do you:", 
+        ["Seek out unique combinations that intrigue you 🌟", 
+         "Prefer to stick to familiar and safe choices 🍵"]
     ],
-    ["How important is presentation to you?", 
-        ["Very important; I love aesthetic drinks that look beautiful 📸", 
-         "Not that important; it's all about the taste 🍹"]
+    ["How significant is the presentation of your drink to you?", 
+        ["Crucial; I love taking photos of beautiful drinks 📸", 
+         "Not a priority; I'm more concerned with taste 🍹"]
     ],
-    ["How do you feel about trying unusual flavors?", 
-        ["I love trying new things; the more unique, the better! 🌟", 
-         "I prefer to stick to what I know; familiarity is comforting 🍵"]
+    ["How do you feel about trying unexpected flavor combinations?", 
+        ["Excited to explore new tastes and surprises! 🎉", 
+         "Cautious; I prefer to know what I'm getting into 🍵"]
     ],
-    ["At the café, do you usually:", 
-        ["Chat with the barista ☕", 
-         "Keep to yourself and enjoy the ambiance 📚"]
+    ["When leaving the café, would you:", 
+        ["Wish the staff farewell and express your gratitude ☕", 
+         "Plan a silent escape without engaging ❌"]
     ],
-    ["As you leave the café, you think about:", 
-        ["How soon you can return for another visit 🚶‍♂️", 
-         "The next adventure you want to plan 🎉"]
+    ["As you leave the café, your thoughts are focused on:", 
+        ["Planning your next cafe-hop with friends 🚶‍♂️", 
+         "Reflecting on your experience and the next cafe visit 🎉"]
     ]
-];
-
+  ];
 
   // Images corresponding to each question
   const images = [
     "static/images/cafe.png", // Image for question 1
-    "static/images/menu.png", // Image for question 2
+    "static/images/table.png", // Image for question 2
     "static/images/drink.png", // Image for question 3
     "static/images/buddy.png", // Image for question 4
     "static/images/thinking.png", // Image for question 5
@@ -80,8 +79,8 @@ const questions = [
     "static/images/flavour.png", // Image for question 8
     "static/images/latte-art.png", // Image for question 9
     "static/images/aroma.png", // Image for question 10
-    "static/images/cafe.png", // Image for question 11
-    "static/images/cafe.png"  // Image for question 12
+    "static/images/goodbye.png", // Image for question 11
+    "static/images/sign.png"  // Image for question 12
   ];
 
   // Initialize scores for MBTI dimensions
@@ -91,7 +90,7 @@ const questions = [
   // Function to update progress bar
   function updateProgressBar() {
     const progressBar = document.getElementById('progress-bar');
-    const progress = (currentQuestion / questions.length) * 100;
+    const progress = ((currentQuestion + 1) / questions.length) * 100; // Update to reflect the next question
     progressBar.style.width = `${progress}%`;
   }
 
