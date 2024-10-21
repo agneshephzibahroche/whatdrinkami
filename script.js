@@ -197,9 +197,14 @@ function showResults() {
   quizContainer.appendChild(buttonsContainer);
 
   // Create a download button
-  const downloadButton = createElement('a', 'Download');
-  downloadButton.href = imageUrls[mbti];
-  downloadButton.download = `${mbti}-drink.png`;
+  const downloadButton = createElement('button', 'Download');
+  downloadButton.classList.add('option');
+  downloadButton.addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.href = imageUrls[mbti];
+  link.download = `${mbti}-drink.png`;
+  link.click();
+  });
   buttonsContainer.appendChild(downloadButton);
 
   // Create a restart button
@@ -207,6 +212,14 @@ function showResults() {
   restartButton.classList.add('option');
   restartButton.addEventListener('click', restartQuiz);
   buttonsContainer.appendChild(restartButton);
+
+  // Create an about button that leads to the about page
+  const homeButton = createElement('button', 'Home');
+  homeButton.classList.add('option');
+  homeButton.addEventListener('click', () => {
+  window.location.href = 'index.html'; // Link to your about page
+  });
+  buttonsContainer.appendChild(homeButton);
 }
 
 // Helper function to create an HTML element
@@ -241,8 +254,7 @@ function createElement(tag, textContent, classList = []) {
       ENFP: 'Strawberry Smoothie 🍓',
       ISTJ: 'Herbal Tea 🍵',
       ESTJ: 'Black Coffee ☕',
-      ISFJ: 'Oat Milk Latte 🥛',
-      ESFJ: 'Hot Chocolate 🍫',
+      ISFJ: 'Milk 🥛',
       ISTP: 'Cold Brew Coffee ☕',
       ISFP: 'Fruit Smoothie 🥭',
       ESTP: 'Iced Mocha ☕🍫',
