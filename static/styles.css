@@ -4,7 +4,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: #dbc9c5;
+  background-color: #efe8d8;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -28,7 +28,7 @@ header {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: #0c2c47;
+  background-color: #725c3f;
 }
 
 nav ul {
@@ -50,7 +50,7 @@ nav ul li a {
   font-family: "Mouse Memoirs", sans-serif;
   text-decoration: none;
   font-size: 2rem;
-  color: #abcbca;
+  color: #d0a77b;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -62,7 +62,7 @@ nav ul li a:hover {
 /* Responsive h1 Logo Styling */
 .logo {
   font-family: "Spicy Rice", serif;
-  color: #e1532a;
+  color: #890547;
   margin: 0;
   font-size: 6rem; /* Large default size */
   line-height: 1.2; /* Slightly reduce line spacing */
@@ -91,7 +91,7 @@ main {
 h2 {
   font-family: "Mouse Memoirs", sans-serif;
   font-size: 2.5rem;
-  color: #2e5749;
+  color: #53994f;
 }
 
 .start {
@@ -104,12 +104,11 @@ h2 {
 /* Footer Styling */
 footer {
   font-family: "Mouse Memoirs", sans-serif;
-  background-color: #0c2c47;
-  color: #bf512c;
+  background-color: #725c3f;
+  color: #d0a77b;
   padding: 10px 0;
   text-align: center;
   font-size: 1.2rem;
-  font-weight: bold;
 }
 
 /* About section */
@@ -136,7 +135,7 @@ footer {
 
 .author h2 {
   font-size: 2rem;
-  color: #e1532a;
+  color: #890547;
   margin-bottom: 20px; /* Space between heading and paragraph */
 }
 
@@ -184,7 +183,6 @@ main {
   border-radius: 5px;
   cursor: pointer;
 }
-
 
 /* Responsive Styles */
 @media (max-width: 1200px) {

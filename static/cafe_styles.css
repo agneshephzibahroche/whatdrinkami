@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #0c2c47;
+  background-color: #725c3f;
   color: #2e5749;
   text-align: center;
   display: flex;
@@ -87,7 +87,7 @@ body {
 /* Quiz Section Styling */
 #quiz-section {
   padding: 1%;
-  background-color: #dbc9c5;
+  background-color: #efe8d8;
   border-radius: 10px;
   width: 80%;
   max-width: 600px;
@@ -104,7 +104,7 @@ body {
 .bebas-neue-regular {
   font-family: "Spicy Rice", serif;
   font-size: 2.2rem;
-  color: #e1532a;
+  color: #890547;
   margin-bottom: 20px;
 }
 
@@ -117,7 +117,7 @@ body {
 }
 
 .option {
-  background: #0c2c47;
+  background: #725c3f;
   color: #fff;
   width: 80%;
   padding: 5px 10px;
@@ -133,7 +133,7 @@ body {
 }
 
 .option:hover {
-  background: #abcbca;
+  background: #efe6d1;
   transform: translateY(-2px);
   color: #000;
 }
@@ -159,7 +159,7 @@ body {
 
 /* Restart Button Styling */
 button.restart {
-  background-color: #0c2c47;
+  background-color: #efe6d1;
   font-family: "Mouse Memoirs", sans-serif;
   font-size: 1.6rem;
   color: #fff;
