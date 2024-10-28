@@ -20,12 +20,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="static/styles.css" />
+
     <style>
       /* Slideshow container */
       .slideshow-container {
         position: relative;
         max-width: 80%;
-        margin: auto;
+        margin: 40px auto;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #f5f5f5;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
       /* Slides */
@@ -94,7 +99,7 @@
         cursor: pointer;
         height: 15px;
         width: 15px;
-        margin: 0 2px;
+        margin: 0 4px;
         background-color: #bbb;
         border-radius: 50%;
         display: inline-block;
@@ -104,6 +109,15 @@
       .active,
       .dot:hover {
         background-color: #717171;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .prev,
+        .next {
+          font-size: 20px;
+          padding: 10px;
+        }
       }
     </style>
   </head>
@@ -118,6 +132,7 @@
     </header>
 
     <main>
+      <h1 class="logo">Café Menu</h1>
       <section class="slideshow-container">
         <!-- Slides -->
         <div class="slides">
@@ -137,51 +152,51 @@
         </div>
 
         <div class="slides">
-          <img src="static/images/mbti/INFJ.png" alt="MBTI Poster 4" />
+          <img src="static/images/mbti/INFJ.png" alt="MBTI Poster 5" />
         </div>
 
         <div class="slides">
-          <img src="static/images/mbti/ENFJ.png" alt="MBTI Poster 4" />
+          <img src="static/images/mbti/ENFJ.png" alt="MBTI Poster 6" />
         </div>
 
         <div class="slides">
-          <img src="static/images/mbti/INFP.png" alt="MBTI Poster 4" />
+          <img src="static/images/mbti/INFP.png" alt="MBTI Poster 7" />
         </div>
 
         <div class="slides">
-          <img src="static/images/mbti/ENFP.png" alt="MBTI Poster 4" />
+          <img src="static/images/mbti/ENFP.png" alt="MBTI Poster 8" />
         </div>
 
         <div class="slides">
-          <img src="static/images/mbti/ISTJ.png" alt="MBTI Poster 4" />
+          <img src="static/images/mbti/ISTJ.png" alt="MBTI Poster 9" />
         </div>
 
         <div class="slides">
-          <img src="static/images/mbti/ESTJ.png" alt="MBTI Poster 4" />
+          <img src="static/images/mbti/ESTJ.png" alt="MBTI Poster 10" />
         </div>
 
         <div class="slides">
-          <img src="static/images/mbti/ISFJ.png" alt="MBTI Poster 4" />
+          <img src="static/images/mbti/ISFJ.png" alt="MBTI Poster 11" />
         </div>
 
         <div class="slides">
-          <img src="static/images/mbti/ESFJ.png" alt="MBTI Poster 4" />
+          <img src="static/images/mbti/ESFJ.png" alt="MBTI Poster 12" />
         </div>
 
         <div class="slides">
-          <img src="static/images/mbti/ISTP.png" alt="MBTI Poster 4" />
+          <img src="static/images/mbti/ISTP.png" alt="MBTI Poster 13" />
         </div>
 
         <div class="slides">
-          <img src="static/images/mbti/ESTP.png" alt="MBTI Poster 4" />
+          <img src="static/images/mbti/ESTP.png" alt="MBTI Poster 14" />
         </div>
 
         <div class="slides">
-          <img src="static/images/mbti/ISFP.png" alt="MBTI Poster 4" />
+          <img src="static/images/mbti/ISFP.png" alt="MBTI Poster 15" />
         </div>
 
         <div class="slides">
-          <img src="static/images/mbti/ESFP.png" alt="MBTI Poster 4" />
+          <img src="static/images/mbti/ESFP.png" alt="MBTI Poster 16" />
         </div>
 
         <!-- Navigation buttons -->
@@ -195,27 +210,40 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
         <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+        <span class="dot" onclick="currentSlide(11)"></span>
+        <span class="dot" onclick="currentSlide(12)"></span>
+        <span class="dot" onclick="currentSlide(13)"></span>
+        <span class="dot" onclick="currentSlide(14)"></span>
+        <span class="dot" onclick="currentSlide(15)"></span>
+        <span class="dot" onclick="currentSlide(16)"></span>
       </div>
     </main>
 
-    <footer>&copy; 2024 What Drink Am I? All Rights Reserved.</footer>
+    <footer>
+      <p>
+        All copyrights belong to <a href="about.html">Agnes Hephzibah Roche</a>
+      </p>
+    </footer>
 
     <script>
       let slideIndex = 1;
       showSlides(slideIndex);
 
-      // Next/previous controls
       function changeSlides(n) {
         showSlides((slideIndex += n));
       }
 
-      // Thumbnail image controls
       function currentSlide(n) {
         showSlides((slideIndex = n));
       }
 
       function showSlides(n) {
-        let i;
         let slides = document.getElementsByClassName("slides");
         let dots = document.getElementsByClassName("dot");
 
@@ -226,11 +254,11 @@
           slideIndex = slides.length;
         }
 
-        for (i = 0; i < slides.length; i++) {
+        for (let i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
         }
 
-        for (i = 0; i < dots.length; i++) {
+        for (let i = 0; i < dots.length; i++) {
           dots[i].className = dots[i].className.replace(" active", "");
         }
 
