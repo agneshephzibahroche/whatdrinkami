@@ -1,232 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What Drink Am I? - MBTI Posters Slideshow</title>
-    <link rel="icon" type="image/x-icon" href="static/images/whatdrinkami-icon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="static/images/whatdrinkami-icon.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="static/styles.css" />
     <style>
-        /* Slideshow container */
-        .slideshow-container {
-            position: relative;
-            max-width: 80%;
-            margin: auto;
-        }
+      /* Slideshow container */
+      .slideshow-container {
+        position: relative;
+        max-width: 80%;
+        margin: auto;
+      }
 
-        /* Slides */
-        .slides {
-            display: none;
-            text-align: center;
-        }
+      /* Slides */
+      .slides {
+        display: none;
+        text-align: center;
+      }
 
-        .slides img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
+      .slides img {
+        max-width: 100%;
+        border-radius: 10px;
+        display: block;
+      }
 
-        /* Caption text */
-        .caption {
-            color: #fff;
-            font-size: 18px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            text-align: center;
-        }
+      /* Caption text */
+      .caption {
+        color: #fff;
+        font-size: 18px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+      }
 
-        /* Next and previous buttons */
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 24px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
+      /* Next and previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
 
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
 
-        .prev {
-            left: 0;
-            border-radius: 3px 3px 0 0;
-        }
+      .prev {
+        left: 0;
+        border-radius: 3px 3px 0 0;
+      }
 
-        /* On hover, add a black background color with a bit of see-through */
-        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
+      /* On hover, add a black background color with a bit of see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
 
-        /* Dots at the bottom */
-        .dot-container {
-            text-align: center;
-            padding: 20px;
-        }
+      /* Dots at the bottom */
+      .dot-container {
+        text-align: center;
+        padding: 20px;
+      }
 
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
 
-        .active, .dot:hover {
-            background-color: #717171;
-        }
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="cafe.html">Café</a></li>
-          </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cafe.html">Café</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section class="slideshow-container">
-
-            <!-- Slides -->
-            <div class="slides">
-                <img src="static/images/mbti/INTJ.png" alt="MBTI Poster 1">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/INTP.png" alt="MBTI Poster 2">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/ENTJ.png" alt="MBTI Poster 3">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/ENTP.png" alt="MBTI Poster 4">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/INFJ.png" alt="MBTI Poster 4">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/ENFJ.png" alt="MBTI Poster 4">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/INFP.png" alt="MBTI Poster 4">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/ENFP.png" alt="MBTI Poster 4">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/ISTJ.png" alt="MBTI Poster 4">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/ESTJ.png" alt="MBTI Poster 4">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/ISFJ.png" alt="MBTI Poster 4">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/ESFJ.png" alt="MBTI Poster 4">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/ISTP.png" alt="MBTI Poster 4">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/ESTP.png" alt="MBTI Poster 4">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/ISFP.png" alt="MBTI Poster 4">
-            </div>
-
-            <div class="slides">
-                <img src="static/images/mbti/ESFP.png" alt="MBTI Poster 4">
-            </div>
-
-
-            <!-- Navigation buttons -->
-            <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlides(1)">&#10095;</a>
-        </section>
-
-        <!-- Dots for navigation -->
-        <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
+      <section class="slideshow-container">
+        <!-- Slides -->
+        <div class="slides">
+          <img src="static/images/mbti/INTJ.png" alt="MBTI Poster 1" />
         </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/INTP.png" alt="MBTI Poster 2" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/ENTJ.png" alt="MBTI Poster 3" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/ENTP.png" alt="MBTI Poster 4" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/INFJ.png" alt="MBTI Poster 4" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/ENFJ.png" alt="MBTI Poster 4" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/INFP.png" alt="MBTI Poster 4" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/ENFP.png" alt="MBTI Poster 4" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/ISTJ.png" alt="MBTI Poster 4" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/ESTJ.png" alt="MBTI Poster 4" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/ISFJ.png" alt="MBTI Poster 4" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/ESFJ.png" alt="MBTI Poster 4" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/ISTP.png" alt="MBTI Poster 4" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/ESTP.png" alt="MBTI Poster 4" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/ISFP.png" alt="MBTI Poster 4" />
+        </div>
+
+        <div class="slides">
+          <img src="static/images/mbti/ESFP.png" alt="MBTI Poster 4" />
+        </div>
+
+        <!-- Navigation buttons -->
+        <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlides(1)">&#10095;</a>
+      </section>
+
+      <!-- Dots for navigation -->
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
     </main>
 
-    <footer>
-        &copy; 2024 What Drink Am I? All Rights Reserved.
-    </footer>
+    <footer>&copy; 2024 What Drink Am I? All Rights Reserved.</footer>
 
     <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+      let slideIndex = 1;
+      showSlides(slideIndex);
 
-        // Next/previous controls
-        function changeSlides(n) {
-            showSlides(slideIndex += n);
+      // Next/previous controls
+      function changeSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slides");
+        let dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
         }
 
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
         }
 
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slides");
-            let dots = document.getElementsByClassName("dot");
-
-            if (n > slides.length) {
-                slideIndex = 1;
-            }
-            if (n < 1) {
-                slideIndex = slides.length;
-            }
-
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
         }
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
     </script>
-</body>
+  </body>
 </html>

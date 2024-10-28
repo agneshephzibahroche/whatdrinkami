@@ -12,116 +12,166 @@ function startQuiz() {
     "Your order is called up at the counter and you eye the drink the barista hands to you.",
     "Your drink is ready, and the delightful aroma captivates you as you pick it up, eager to take your first sip.",
     "As you prepare to leave, you take a moment to appreciate the café's cozy vibe, feeling a sense of fulfillment.",
-    "With your drink in hand, you step out, excited about the flavors you've chosen and the connections you might have made."
+    "With your drink in hand, you step out, excited about the flavors you've chosen and the connections you might have made.",
   ];
 
   // Questions and options for each question
   const questions = [
-    ["How do you feel when you first enter the café?", 
-        ["Eager to catch up with friends and share stories ☕", 
-         "Content to find a cozy corner to relax and people watch 🍵"]
+    [
+      "How do you feel when you first enter the café?",
+      [
+        "Eager to catch up with friends and share stories ☕",
+        "Content to find a cozy corner to relax and people watch 🍵",
+      ],
     ],
-    ["What kind of café environment do you thrive in?", 
-        ["A vibrant café buzzing with chatter and laughter 🥤", 
-         "A peaceful and quiet café corner 🏡"]
+    [
+      "What kind of café environment do you thrive in?",
+      [
+        "A vibrant café buzzing with chatter and laughter 🥤",
+        "A peaceful and quiet café corner 🏡",
+      ],
     ],
-    ["When browsing the drink menu, do you:", 
-        ["Experiment with unique and trendy drinks 🍹", 
-         "Stick with your reliable favorites ☕"]
+    [
+      "When browsing the drink menu, do you:",
+      [
+        "Experiment with unique and trendy drinks 🍹",
+        "Stick with your reliable favorites ☕",
+      ],
     ],
-    ["How would you approach new people at the café?", 
-        ["I confidently start conversations and make connections 🤝", 
-         "I prefer to observe and engage only if I feel comfortable 👀"]
+    [
+      "How would you approach new people at the café?",
+      [
+        "I confidently start conversations and make connections 🤝",
+        "I prefer to observe and engage only if I feel comfortable 👀",
+      ],
     ],
-    ["What’s your ideal café experience?", 
-        ["Engaging in lively discussions with friends ☕", 
-         "Reading quietly and enjoying my drink alone 🍵"]
+    [
+      "What’s your ideal café experience?",
+      [
+        "Engaging in lively discussions with friends ☕",
+        "Reading quietly and enjoying my drink alone 🍵",
+      ],
     ],
-    ["The barista makes small talk with you, what do you do?", 
-        ["Entertain the conversation and chat, maybe make a new friend 🗣️", 
-         "Respond politely and focus on ordering my drink 📖"]
+    [
+      "The barista makes small talk with you, what do you do?",
+      [
+        "Entertain the conversation and chat, maybe make a new friend 🗣️",
+        "Respond politely and focus on ordering my drink 📖",
+      ],
     ],
-    ["Do you prefer your drinks:", 
-        ["Strong and bold to keep you energized ☕", 
-         "Light and refreshing to relax you 🍹"]
+    [
+      "Do you prefer your drinks:",
+      [
+        "Strong and bold to keep you energized ☕",
+        "Light and refreshing to relax you 🍹",
+      ],
     ],
-    ["When it comes to trying new flavors, do you:", 
-        ["Seek out unique combinations that intrigue you 🌟", 
-         "Prefer to stick to familiar and safe choices 🍵"]
+    [
+      "When it comes to trying new flavors, do you:",
+      [
+        "Seek out unique combinations that intrigue you 🌟",
+        "Prefer to stick to familiar and safe choices 🍵",
+      ],
     ],
-    ["How significant is the presentation of your drink to you?", 
-        ["Crucial; I love taking photos of beautiful drinks 📸", 
-         "Not a priority; I'm more concerned with taste 🍹"]
+    [
+      "How significant is the presentation of your drink to you?",
+      [
+        "Crucial; I love taking photos of beautiful drinks 📸",
+        "Not a priority; I'm more concerned with taste 🍹",
+      ],
     ],
-    ["How do you feel about trying unexpected flavor combinations?", 
-        ["Excited to explore new tastes and surprises! 🎉", 
-         "Cautious; I prefer to know what I'm getting into 🍵"]
+    [
+      "How do you feel about trying unexpected flavor combinations?",
+      [
+        "Excited to explore new tastes and surprises! 🎉",
+        "Cautious; I prefer to know what I'm getting into 🍵",
+      ],
     ],
-    ["When leaving the café, would you:", 
-        ["Wish the staff farewell and express your gratitude ☕", 
-         "Plan a silent escape without engaging ❌"]
+    [
+      "When leaving the café, would you:",
+      [
+        "Wish the staff farewell and express your gratitude ☕",
+        "Plan a silent escape without engaging ❌",
+      ],
     ],
-    ["As you leave the café, your thoughts are focused on:", 
-        ["Planning your next cafe-hop with friends 🚶‍♂️", 
-         "Reflecting on your experience and the next cafe visit 🎉"]
-    ]
+    [
+      "As you leave the café, your thoughts are focused on:",
+      [
+        "Planning your next cafe-hop with friends 🚶‍♂️",
+        "Reflecting on your experience and the next cafe visit 🎉",
+      ],
+    ],
   ];
 
   // Images corresponding to each question
   const images = [
-    "static/images/cafe.png", // Image for question 1
-    "static/images/table.png", // Image for question 2
-    "static/images/drink.png", // Image for question 3
-    "static/images/buddy.png", // Image for question 4
-    "static/images/thinking.png", // Image for question 5
-    "static/images/barista.png", // Image for question 6
-    "static/images/temperatures.png", // Image for question 7
-    "static/images/flavour.png", // Image for question 8
-    "static/images/latte-art.png", // Image for question 9
-    "static/images/aroma.png", // Image for question 10
-    "static/images/goodbye.png", // Image for question 11
-    "static/images/sign.png"  // Image for question 12
+    "static/images/cafe.png",
+    "static/images/table.png",
+    "static/images/drink.png",
+    "static/images/buddy.png",
+    "static/images/thinking.png",
+    "static/images/barista.png",
+    "static/images/temperatures.png",
+    "static/images/flavour.png",
+    "static/images/latte-art.png",
+    "static/images/aroma.png",
+    "static/images/goodbye.png",
+    "static/images/sign.png",
   ];
 
   // Initialize scores for MBTI dimensions
   const scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
   let currentQuestion = 0;
 
+  // Define which MBTI dimension each question relates to
+  const mbtiMap = [
+    ["E", "I"], // Q1: Extraversion vs Introversion
+    ["E", "I"], // Q2: Extraversion vs Introversion
+    ["S", "N"], // Q3: Sensing vs Intuition
+    ["E", "I"], // Q4: Extraversion vs Introversion
+    ["E", "I"], // Q5: Extraversion vs Introversion
+    ["T", "F"], // Q6: Thinking vs Feeling
+    ["T", "F"], // Q7: Thinking vs Feeling
+    ["S", "N"], // Q8: Sensing vs Intuition
+    ["T", "F"], // Q9: Thinking vs Feeling
+    ["S", "N"], // Q10: Sensing vs Intuition
+    ["J", "P"], // Q11: Judging vs Perceiving
+    ["J", "P"], // Q12: Judging vs Perceiving
+  ];
+
   // Function to update progress bar
   function updateProgressBar() {
-    const progressBar = document.getElementById('progress-bar');
-    const progress = ((currentQuestion + 1) / questions.length) * 100; // Update to reflect the next question
+    const progressBar = document.getElementById("progress-bar");
+    const progress = ((currentQuestion + 1) / questions.length) * 100;
     progressBar.style.width = `${progress}%`;
   }
 
   // Function to display the current question
   function displayQuestion() {
-    const quizContainer = document.getElementById('quiz');
-    quizContainer.innerHTML = ''; // Clear previous content
+    const quizContainer = document.getElementById("quiz");
+    quizContainer.innerHTML = "";
 
     if (currentQuestion < questions.length) {
-      // Display narrative
-      quizContainer.appendChild(createElement('div', narration[currentQuestion]));
-
-      // Display question image
-      const imgElement = createElement('img');
-      imgElement.src = images[currentQuestion]; // Set the image source
+      quizContainer.appendChild(
+        createElement("div", narration[currentQuestion])
+      );
+      const imgElement = createElement("img");
+      imgElement.src = images[currentQuestion];
       imgElement.alt = `Image for question ${currentQuestion + 1}`;
-      imgElement.classList.add('question-image'); // Add class for styling
+      imgElement.classList.add("question-image");
       quizContainer.appendChild(imgElement);
 
-      // Display question
-      quizContainer.appendChild(createElement('div', questions[currentQuestion][0]));
+      quizContainer.appendChild(
+        createElement("div", questions[currentQuestion][0])
+      );
 
-      // Display options as buttons
       questions[currentQuestion][1].forEach((option, index) => {
-        const button = createElement('button', option);
-        button.classList.add('option');
-        button.addEventListener('click', () => recordAnswer(index));
+        const button = createElement("button", option);
+        button.classList.add("option");
+        button.addEventListener("click", () => recordAnswer(index));
         quizContainer.appendChild(button);
       });
 
-      // Update progress bar
       updateProgressBar();
     } else {
       showResults();
@@ -138,128 +188,91 @@ function startQuiz() {
 
   // Function to record the user's answer
   function recordAnswer(selectedIndex) {
-    const properties = [['E', 'I'], ['S', 'N'], ['T', 'F'], ['J', 'P']];
-    const questionType = currentQuestion % 4; // Determine which MBTI dimension to update
-
-    // Update scores based on the selected answer
-    scores[properties[questionType][selectedIndex]]++;
-
-    // Move to the next question
+    const mbtiDimension = mbtiMap[currentQuestion];
+    scores[mbtiDimension[selectedIndex]]++;
     currentQuestion++;
     displayQuestion();
   }
 
-// Function to display the results
-function showResults() {
-  const quizContainer = document.getElementById('quiz');
-  quizContainer.innerHTML = ''; // Clear the quiz container
+  // Function to display the results
+  function showResults() {
+    const quizContainer = document.getElementById("quiz");
+    quizContainer.innerHTML = "";
 
-  // Calculate the MBTI result based on scores
-  const mbti = calculateMBTI();
-  
-  // Display the final result
-  const resultDiv = createElement('div', `Your MBTI type is: ${mbti}`);
-  quizContainer.appendChild(resultDiv);
+    const mbti = calculateMBTI();
+    quizContainer.appendChild(
+      createElement("div", `Your MBTI type is: ${mbti}`)
+    );
+    quizContainer.appendChild(
+      createElement(
+        "div",
+        `You are best matched with: ${getDrinkRecommendation(mbti)}`
+      )
+    );
 
-  const drinkRecommendation = createElement('div', `You are best matched with: ${getDrinkRecommendation(mbti)}`);
-  quizContainer.appendChild(drinkRecommendation);
+    const resultImage = createElement("img");
+    resultImage.src = `static/images/mbti/${mbti}.png`;
+    resultImage.alt = `${mbti} Drink Recommendation`;
+    resultImage.classList.add("result-image");
+    quizContainer.appendChild(resultImage);
 
-  // Set image URL based on MBTI type (ensure these paths match your file locations)
-  const imageUrls = {
-      INTJ: 'static/images/mbti/INTJ.png',
-      INTP: 'static/images/mbti/INTP.png',
-      ENTJ: 'static/images/mbti/ENTJ.png',
-      ENTP: 'static/images/mbti/ENTP.png',
-      INFJ: 'static/images/mbti/INFJ.png',
-      ENFJ: 'static/images/mbti/ENFJ.png',
-      INFP: 'static/images/mbti/INFP.png',
-      ENFP: 'static/images/mbti/ENFP.png',
-      ISTJ: 'static/images/mbti/ISTJ.png',
-      ESTJ: 'static/images/mbti/ESTJ.png',
-      ISFJ: 'static/images/mbti/ISFJ.png',
-      ESFJ: 'static/images/mbti/ESFJ.png',
-      ISTP: 'static/images/mbti/ISTP.png',
-      ESTP: 'static/images/mbti/ESTP.png',
-      ISFP: 'static/images/mbti/ISFP.png',
-      ESFP: 'static/images/mbti/ESFP.png'
-  };
+    const buttonsContainer = createElement("div");
+    buttonsContainer.classList.add("buttons-container");
+    quizContainer.appendChild(buttonsContainer);
 
-  // Create an image element for the MBTI type
-  const resultImage = createElement('img');
-  resultImage.src = imageUrls[mbti];
-  resultImage.alt = `${mbti} Drink Recommendation`;
-  resultImage.classList.add('result-image');
-  quizContainer.appendChild(resultImage);
+    // Create an about button that leads to the about page
+    const homeButton = createElement("button", "Home");
+    homeButton.classList.add("option");
+    homeButton.addEventListener("click", () => {
+      window.location.href = "index.html"; // Link to your about page
+    });
+    buttonsContainer.appendChild(homeButton);
 
-  // Create a container for buttons
-  const buttonsContainer = createElement('div');
-  buttonsContainer.classList.add('buttons-container');
-  quizContainer.appendChild(buttonsContainer);
+    const downloadButton = createElement("button", "Download");
+    downloadButton.classList.add("option");
+    downloadButton.addEventListener("click", () => {
+      const link = document.createElement("a");
+      link.href = `static/images/mbti/${mbti}.png`;
+      link.download = `${mbti}-drink.png`;
+      link.click();
+    });
+    buttonsContainer.appendChild(downloadButton);
 
-  // Create a download button
-  const downloadButton = createElement('button', 'Download');
-  downloadButton.classList.add('option');
-  downloadButton.addEventListener('click', () => {
-  const link = document.createElement('a');
-  link.href = imageUrls[mbti];
-  link.download = `${mbti}-drink.png`;
-  link.click();
-  });
-  buttonsContainer.appendChild(downloadButton);
-
-  // Create a restart button
-  const restartButton = createElement('button', 'Take the Quiz Again');
-  restartButton.classList.add('option');
-  restartButton.addEventListener('click', restartQuiz);
-  buttonsContainer.appendChild(restartButton);
-
-  // Create an about button that leads to the about page
-  const homeButton = createElement('button', 'Home');
-  homeButton.classList.add('option');
-  homeButton.addEventListener('click', () => {
-  window.location.href = 'index.html'; // Link to your about page
-  });
-  buttonsContainer.appendChild(homeButton);
-}
-
-// Helper function to create an HTML element
-function createElement(tag, textContent, classList = []) {
-  const element = document.createElement(tag);
-  element.textContent = textContent;
-  if (classList.length) element.classList.add(...classList);
-  return element;
-}
-
+    const restartButton = createElement("button", "Take the Quiz Again");
+    restartButton.classList.add("option");
+    restartButton.addEventListener("click", restartQuiz);
+    buttonsContainer.appendChild(restartButton);
+  }
 
   // Helper function to calculate the MBTI type
   function calculateMBTI() {
-    let mbti = '';
-    mbti += scores.E > scores.I ? 'E' : 'I'; // Extraversion or Introversion
-    mbti += scores.S > scores.N ? 'S' : 'N'; // Sensing or Intuition
-    mbti += scores.T > scores.F ? 'T' : 'F'; // Thinking or Feeling
-    mbti += scores.J > scores.P ? 'J' : 'P'; // Judging or Perceiving
+    let mbti = "";
+    mbti += scores.E > scores.I ? "E" : "I";
+    mbti += scores.S > scores.N ? "S" : "N";
+    mbti += scores.T > scores.F ? "T" : "F";
+    mbti += scores.J > scores.P ? "J" : "P";
     return mbti;
   }
 
   // Function to get drink recommendation based on MBTI type
   function getDrinkRecommendation(mbti) {
     const recommendations = {
-      INTJ: 'Espresso Shot ☕',
-      ENTJ: 'Double Espresso ☕',
-      INTP: 'Iced Americano ☕',
-      ENTP: 'Cappuccino ☕',
-      INFJ: 'Matcha Latte 🍵',
-      ENFJ: 'Latte ☕',
-      INFP: 'Chai 🍂',
-      ENFP: 'Strawberry Smoothie 🍓',
-      ISTJ: 'Herbal Tea 🍵',
-      ESTJ: 'Lemonade 🍋',
-      ISFJ: 'Milk 🥛',
-      ESFJ: 'Hot Chocolate 🍫',
-      ISTP: 'Coconut Water 🥥',
-      ESTP: 'Soda 🥤',
-      ISFP: 'Banana Smoothie 🍌',
-      ESFP: 'Bubble Tea 🧋'
+      INTJ: "Espresso Shot ☕",
+      ENTJ: "Double Espresso ☕",
+      INTP: "Iced Americano ☕",
+      ENTP: "Cappuccino ☕",
+      INFJ: "Matcha Latte 🍵",
+      ENFJ: "Latte ☕",
+      INFP: "Chai 🍂",
+      ENFP: "Strawberry Smoothie 🍓",
+      ISTJ: "Herbal Tea 🍵",
+      ESTJ: "Lemonade 🍋",
+      ISFJ: "Milk 🥛",
+      ESFJ: "Hot Chocolate 🍫",
+      ISTP: "Coconut Water 🥥",
+      ESTP: "Soda 🥤",
+      ISFP: "Banana Smoothie 🍌",
+      ESFP: "Bubble Tea 🧋",
     };
     return recommendations[mbti];
   }
@@ -267,7 +280,7 @@ function createElement(tag, textContent, classList = []) {
   // Function to restart the quiz
   function restartQuiz() {
     currentQuestion = 0;
-    Object.keys(scores).forEach(key => scores[key] = 0); // Reset scores
+    Object.keys(scores).forEach((key) => (scores[key] = 0));
     displayQuestion();
   }
 
@@ -276,4 +289,4 @@ function createElement(tag, textContent, classList = []) {
 }
 
 // Initialize the quiz when the document is ready
-document.addEventListener('DOMContentLoaded', startQuiz);
+document.addEventListener("DOMContentLoaded", startQuiz);
