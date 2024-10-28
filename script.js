@@ -17,13 +17,13 @@ function startQuiz() {
 
   // Questions and options for each question
   const questions = [
-    ["How do you feel when you first enter a café?", 
+    ["How do you feel when you first enter the café?", 
         ["Eager to catch up with friends and share stories ☕", 
          "Content to find a cozy corner to relax and people watch 🍵"]
     ],
-    ["What kind of environment do you thrive in?", 
+    ["What kind of café environment do you thrive in?", 
         ["A vibrant café buzzing with chatter and laughter 🥤", 
-         "A peaceful library or a quiet café corner 🏡"]
+         "A peaceful and quiet café corner 🏡"]
     ],
     ["When browsing the drink menu, do you:", 
         ["Experiment with unique and trendy drinks 🍹", 
@@ -166,22 +166,22 @@ function showResults() {
 
   // Set image URL based on MBTI type (ensure these paths match your file locations)
   const imageUrls = {
-      ESTJ: 'static/images/intj-image.png',
-      ISTJ: 'static/images/intj-image.png',
-      ENTJ: 'static/images/intj-image.png',
-      INTJ: 'static/images/intj-image.png',
-      ENTP: 'static/images/intj-image.png',
-      INTP: 'static/images/intj-image.png',
-      ENFJ: 'static/images/intj-image.png',
-      INFJ: 'static/images/intj-image.png',
-      ENFP: 'static/images/intj-image.png',
-      INFP: 'static/images/intj-image.png',
-      ESFP: 'static/images/intj-image.png',
-      ISFP: 'static/images/intj-image.png',
-      ESTP: 'static/images/intj-image.png',
-      ISTP: 'static/images/intj-image.png',
-      ESFJ: 'static/images/intj-image.png',
-      ISFJ: 'static/images/intj-image.png',
+      INTJ: 'static/images/mbti/INTJ.png',
+      INTP: 'static/images/mbti/INTP.png',
+      ENTJ: 'static/images/mbti/ENTJ.png',
+      ENTP: 'static/images/mbti/ENTP.png',
+      INFJ: 'static/images/mbti/INFJ.png',
+      ENFJ: 'static/images/mbti/ENFJ.png',
+      INFP: 'static/images/mbti/INFP.png',
+      ENFP: 'static/images/mbti/ENFP.png',
+      ISTJ: 'static/images/mbti/ISTJ.png',
+      ESTJ: 'static/images/mbti/ESTJ.png',
+      ISFJ: 'static/images/mbti/ISFJ.png',
+      ESFJ: 'static/images/mbti/ESFJ.png',
+      ISTP: 'static/images/mbti/ISTP.png',
+      ESTP: 'static/images/mbti/ESTP.png',
+      ISFP: 'static/images/mbti/ISFP.png',
+      ESFP: 'static/images/mbti/ESFP.png'
   };
 
   // Create an image element for the MBTI type
@@ -247,20 +247,21 @@ function createElement(tag, textContent, classList = []) {
       INTJ: 'Espresso Shot ☕',
       ENTJ: 'Double Espresso ☕',
       INTP: 'Iced Americano ☕',
-      ENTP: 'Nitro Cold Brew 🍻',
+      ENTP: 'Cappuccino ☕',
       INFJ: 'Matcha Latte 🍵',
-      INFP: 'Chai Tea Latte 🍂',
-      ENFJ: 'Caramel Macchiato 🍮',
+      ENFJ: 'Latte ☕',
+      INFP: 'Chai 🍂',
       ENFP: 'Strawberry Smoothie 🍓',
       ISTJ: 'Herbal Tea 🍵',
-      ESTJ: 'Black Coffee ☕',
+      ESTJ: 'Lemonade 🍋',
       ISFJ: 'Milk 🥛',
-      ISTP: 'Cold Brew Coffee ☕',
-      ISFP: 'Fruit Smoothie 🥭',
-      ESTP: 'Iced Mocha ☕🍫',
-      ESFP: 'Milkshake 🍦'
+      ESFJ: 'Hot Chocolate 🍫',
+      ISTP: 'Coconut Water 🥥',
+      ESTP: 'Soda 🥤',
+      ISFP: 'Banana Smoothie 🍌',
+      ESFP: 'Bubble Tea 🧋'
     };
-    return recommendations[mbti] || 'A refreshing drink! 🍹';
+    return recommendations[mbti];
   }
 
   // Function to restart the quiz

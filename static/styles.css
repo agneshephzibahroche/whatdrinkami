@@ -112,6 +112,80 @@ footer {
   font-weight: bold;
 }
 
+/* About section */
+.about {
+  font-family: "Mouse Memoirs", sans-serif;
+  color: #2e5749;
+  line-height: 1.3;
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Center-align the about text */
+}
+
+/* Author section */
+.author {
+  font-family: "Mouse Memoirs", sans-serif;
+  color: #2e5749;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Center-align the author text */
+}
+
+.author h2 {
+  font-size: 2rem;
+  color: #e1532a;
+  margin-bottom: 20px; /* Space between heading and paragraph */
+}
+
+.author p {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.author a {
+  color: #da9b2b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.author a:hover {
+  color: #e1532a;
+}
+
+/* General page adjustments */
+main {
+  padding: 20px;
+}
+
+.poster-gallery {
+  padding: 20px;
+  text-align: center;
+}
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.poster-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.poster-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .logo {
