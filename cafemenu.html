@@ -15,111 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/cafemenu_styles.css" />
     <link rel="stylesheet" href="static/styles.css" />
-
-    <style>
-      /* Slideshow container */
-      .slideshow-container {
-        position: relative;
-        max-width: 80%;
-        margin: 40px auto;
-        padding: 10px;
-        border-radius: 10px;
-        background-color: #f5f5f5;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Slides */
-      .slides {
-        display: none;
-        text-align: center;
-      }
-
-      .slides img {
-        max-width: 100%;
-        border-radius: 10px;
-        display: block;
-      }
-
-      /* Caption text */
-      .caption {
-        color: #fff;
-        font-size: 18px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-        text-align: center;
-      }
-
-      /* Next and previous buttons */
-      .prev,
-      .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 24px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-      }
-
-      .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-      }
-
-      .prev {
-        left: 0;
-        border-radius: 3px 3px 0 0;
-      }
-
-      /* On hover, add a black background color with a bit of see-through */
-      .prev:hover,
-      .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-      }
-
-      /* Dots at the bottom */
-      .dot-container {
-        text-align: center;
-        padding: 20px;
-      }
-
-      .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 4px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-      }
-
-      .active,
-      .dot:hover {
-        background-color: #717171;
-      }
-
-      /* Responsive styles */
-      @media (max-width: 768px) {
-        .prev,
-        .next {
-          font-size: 20px;
-          padding: 10px;
-        }
-      }
-    </style>
+    
   </head>
   <body>
     <header>
@@ -203,26 +104,6 @@
         <a class="prev" onclick="changeSlides(-1)">&#10094;</a>
         <a class="next" onclick="changeSlides(1)">&#10095;</a>
       </section>
-
-      <!-- Dots for navigation -->
-      <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(8)"></span>
-        <span class="dot" onclick="currentSlide(9)"></span>
-        <span class="dot" onclick="currentSlide(10)"></span>
-        <span class="dot" onclick="currentSlide(11)"></span>
-        <span class="dot" onclick="currentSlide(12)"></span>
-        <span class="dot" onclick="currentSlide(13)"></span>
-        <span class="dot" onclick="currentSlide(14)"></span>
-        <span class="dot" onclick="currentSlide(15)"></span>
-        <span class="dot" onclick="currentSlide(16)"></span>
-      </div>
     </main>
 
     <footer>
@@ -245,7 +126,6 @@
 
       function showSlides(n) {
         let slides = document.getElementsByClassName("slides");
-        let dots = document.getElementsByClassName("dot");
 
         if (n > slides.length) {
           slideIndex = 1;
@@ -258,12 +138,8 @@
           slides[i].style.display = "none";
         }
 
-        for (let i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
 
         slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
       }
     </script>
   </body>

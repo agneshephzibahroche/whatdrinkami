@@ -1,7 +1,6 @@
-/* General body and background */
+/* General Styling */
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
   background-color: #725c3f;
   color: #2e5749;
   text-align: center;
@@ -13,23 +12,50 @@ body {
   flex-direction: column;
 }
 
+/* Typography */
 .spicy-rice-regular {
+  color: #890547;
   font-family: "Spicy Rice", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.mouse-memoirs-regular {
-  font-family: "Mouse Memoirs", sans-serif;
+.atma-light {
+  font-family: "Atma", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.atma-regular {
+  font-family: "Atma", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
-/* Progress Bar Container */
+.atma-medium {
+  font-family: "Atma", system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.atma-semibold {
+  font-family: "Atma", system-ui;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.atma-bold {
+  font-family: "Atma", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* Progress Bar */
 #progress-container {
   width: 80%;
   height: 0.8rem;
-  background-color: #ddd; /* Neutral background */
+  background-color: #ddd;
   position: fixed;
   top: 0;
   left: 50%;
@@ -37,19 +63,18 @@ body {
   border-radius: 0.5rem;
   z-index: 100;
   max-width: 600px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
-  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-top: 10px;
+  overflow: hidden;
 }
 
-/* Progress Bar Fill */
 #progress-bar {
   width: 0;
   height: 100%;
-  background: linear-gradient(90deg, #e1532a, #e24aa8); /* Gradient effect */
+  background: linear-gradient(90deg, #e1532a, #e24aa8);
   border-radius: 0.5rem 0 0 0.5rem;
   transition: width 0.5s ease;
-  box-shadow: 0 0 10px rgba(74, 144, 226, 0.6); /* Soft glow effect */
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.6);
 }
 
 /* Optional Progress Percentage */
@@ -58,12 +83,12 @@ body {
   font-size: 0.9rem;
   color: #2e5749;
   position: absolute;
-  top: -1.5rem; /* Float percentage above the bar */
+  top: -1.5rem;
   left: 50%;
   transform: translateX(-50%);
 }
 
-/* Progress Icon - Optional */
+/* Progress Icon */
 #progress-icon {
   position: absolute;
   top: 50%;
@@ -83,7 +108,7 @@ body {
   border-radius: 50%;
 }
 
-/* Quiz Section Styling */
+/* Quiz Section */
 #quiz-section {
   padding: 1%;
   background-color: #efe8d8;
@@ -99,20 +124,14 @@ body {
   margin-top: 2rem;
 }
 
-/* Font Styling for Heading */
-.bebas-neue-regular {
-  font-family: "Spicy Rice", serif;
-  font-size: 2.2rem;
-  color: #890547;
-  margin-bottom: 20px;
-}
-
-/* Quiz Options Styling */
+/* Quiz Options */
 #quiz {
   display: flex;
   flex-direction: column;
-  font-family: "Spicy Rice", serif;
-  font-size: 1.2rem;
+  font-family: "Atma", system-ui;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.1rem;
 }
 
 .option {
@@ -127,17 +146,19 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background 0.7s ease, transform 0.2s ease;
   align-self: center;
-  font-family: "Mouse Memoirs", sans-serif;
-  font-size: 1.2rem;
+  font-family: "Atma", system-ui;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1rem;
 }
 
 .option:hover {
-  background: #efe6d1;
+  background: #9c866a;
   transform: translateY(-2px);
   color: #000;
 }
 
-/* Result Section Styling */
+/* Result Section */
 #result {
   margin: 20px auto;
   font-size: 1.5rem;
@@ -156,19 +177,7 @@ body {
   height: 50px;
 }
 
-/* Restart Button Styling */
-button.restart {
-  background-color: #efe6d1;
-  font-family: "Mouse Memoirs", sans-serif;
-  font-size: 1.6rem;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
+/* Image Styling */
 .question-image {
   max-width: 50%;
   height: auto;
@@ -180,23 +189,37 @@ button.restart {
   transform: scale(1.05);
 }
 
-/* Smaller image container */
+/* Result Image */
 .result-image {
-  max-width: 150px; /* Smaller image size */
+  max-width: 150px;
   margin: 10px auto;
   display: block;
 }
 
-/* Download button styling */
+/* Button Styling */
+button.restart {
+  background-color: #efe6d1;
+  font-family: "Atma", system-ui;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.6rem;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .download-button {
   display: inline-block;
   margin-top: 15px;
-  padding: 8px 16px; /* Smaller padding for a more compact button */
+  padding: 8px 16px;
   background-color: #4ab293;
   color: #fff;
   text-decoration: none;
-  font-size: 1rem; /* Smaller font size */
-  border-radius: 6px; /* More compact border radius */
+  font-size: 1rem;
+  border-radius: 6px;
   transition: background 0.3s ease;
 }
 
@@ -204,8 +227,8 @@ button.restart {
   background-color: #3a9b73;
 }
 
-/* Result section container */
+/* Result Section Container */
 #quiz {
-  max-width: 400px; /* Smaller container for the result section */
+  max-width: 400px;
   margin: 0 auto;
 }

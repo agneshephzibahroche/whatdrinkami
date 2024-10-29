@@ -17,10 +17,32 @@ body {
   font-style: normal;
 }
 
-.mouse-memoirs-regular {
-  font-family: "Mouse Memoirs", sans-serif;
+.atma-light,
+.atma-regular,
+.atma-medium,
+.atma-semibold,
+.atma-bold {
+  font-family: "Atma", system-ui;
+}
+
+.atma-light {
+  font-weight: 300;
+}
+
+.atma-regular {
   font-weight: 400;
-  font-style: normal;
+}
+
+.atma-medium {
+  font-weight: 500;
+}
+
+.atma-semibold {
+  font-weight: 600;
+}
+
+.atma-bold {
+  font-weight: 700;
 }
 
 /* Header */
@@ -28,8 +50,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  background-color: #725c3f;
+  padding: 10px;
+  background-color: #efe8d8;
 }
 
 nav ul {
@@ -38,26 +60,24 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: nowrap;
   width: 100%;
 }
 
 nav ul li {
-  display: inline-block;
   padding: 0 40px;
 }
 
 nav ul li a {
-  font-family: "Mouse Memoirs", sans-serif;
-  text-decoration: none;
-  font-size: 2rem;
-  color: #d0a77b;
+  font-family: "Atma", system-ui;
+  font-size: 1.5rem;
+  color: #725c3f;
   font-weight: bold;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #fff;
+  color: #d0a77b;
 }
 
 /* Logo Styling */
@@ -65,6 +85,7 @@ nav ul li a:hover {
   font-family: "Spicy Rice", serif;
   color: #890547;
   margin: 0;
+  padding: 10px o;
   font-size: 6rem;
   line-height: 1.2;
 }
@@ -72,12 +93,12 @@ nav ul li a:hover {
 /* Main Content */
 main {
   margin: 20px 0;
+  padding: 20px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 .hero-image {
@@ -92,24 +113,26 @@ main {
 }
 
 h2 {
-  font-family: "Mouse Memoirs", sans-serif;
+  font-family: "Atma", system-ui;
+  font-weight: 500;
   font-size: 2.5rem;
   color: #2e5749;
 }
 
 .start {
-  font-family: "Mouse Memoirs", sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
+  font-family: "Atma", system-ui;
+  font-size: 1.5rem;
+  font-weight: 500;
   color: #2e5749;
 }
 
 /* About Section */
 .about {
-  font-family: "Mouse Memoirs", sans-serif;
+  font-family: "Atma", system-ui;
+  font-weight: 500;
+  font-size: 1.2rem;
   color: #2e5749;
   line-height: 1.3;
-  font-size: 1.5rem;
   max-width: 600px;
   margin: auto;
   text-align: center;
@@ -117,9 +140,12 @@ h2 {
 
 /* Author Section */
 .author {
-  font-family: "Mouse Memoirs", sans-serif;
+  font-family: "Atma", system-ui;
+  font-weight: 500;
+  font-size: 1.2rem;
   color: #2e5749;
-  max-width: 800px;
+  line-height: 1.3;
+  max-width: 500px;
   margin: auto;
   text-align: center;
 }
@@ -132,12 +158,11 @@ h2 {
 
 .author p {
   margin-bottom: 20px;
-  font-size: 1.2rem;
 }
 
 .author a {
   color: #da9b2b;
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: bold;
 }
 
@@ -173,10 +198,10 @@ h2 {
 
 /* Footer */
 footer {
-  font-family: "Mouse Memoirs", sans-serif;
+  font-family: "Atma", system-ui;
+  font-weight: 500;
   background-color: #725c3f;
-  color: #d0a77b;
-  padding: 10px 0;
+  color: #eccfb1;
   text-align: center;
   font-size: 1.2rem;
 }
@@ -191,6 +216,7 @@ footer {
 @media (max-width: 768px) {
   nav ul li {
     margin: 0 10px;
+    font-size: 1.2rem;
   }
 
   .logo {
@@ -198,7 +224,7 @@ footer {
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .hero-image {
@@ -209,11 +235,14 @@ footer {
 @media (max-width: 480px) {
   nav ul {
     justify-content: space-around;
-    flex-wrap: nowrap;
   }
 
   nav ul li {
     margin: 0 5px;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
   }
 
   .logo {
@@ -222,9 +251,19 @@ footer {
 
   h2 {
     font-size: 1.2rem;
+    font-weight: 550;
   }
 
   .hero-image {
     max-width: 150px;
+  }
+
+  footer{
+    font-size: 1rem;
+  }
+
+  .about,
+  .author {
+    font-size: 1rem;
   }
 }
