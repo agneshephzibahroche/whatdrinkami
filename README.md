@@ -1,9 +1,9 @@
 # WhatDrinkAmI 🍹
-WhatDrinkAmI is an engaging personality quiz that matches your unique traits to a drink based on the 16 personality types 🧠. Whether you're a devoted coffee lover ☕, a vibrant smoothie fanatic 🥤, or a calming tea connoisseur 🍵, discover which drink perfectly represents you!
+[WhatDrinkAmI](https://agneshephzibahroche.github.io/whatdrinkami/) is an engaging personality quiz that matches your unique traits to a drink based on the 16 personality types 🧠. Whether you're a devoted coffee lover ☕, a vibrant smoothie fanatic 🥤, or a calming tea connoisseur 🍵, discover which drink perfectly represents you!
 
 ## 📝 Get Started
-- Take the Quiz: Click here to start the test!
-- Alternatively: Access the quiz via this link: Link
+- Take the Quiz: Click [here](https://agneshephzibahroche.github.io/whatdrinkami/) to start the test!
+- Alternatively: Access the quiz via this link: [https://agneshephzibahroche.github.io/whatdrinkami/](https://agneshephzibahroche.github.io/whatdrinkami/)
 
 ## 🚀 Features
 - Comprehensive Questionnaire: Answer 12 carefully crafted questions to reveal your drink personality.
